@@ -18,7 +18,7 @@ fi
 
 cat <<EOF >info.txt
 echo "== Info Mesin =="
-echo "Worker : $1"
+echo "Name : $1"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
@@ -26,7 +26,7 @@ echo "================"
 EOF
 
 echo "== Info Mesin =="
-echo "Worker : $1"
+echo "Name : $1"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"

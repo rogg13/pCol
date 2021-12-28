@@ -18,7 +18,7 @@ then
 fi
 
 echo "= eGn01 ="
-echo "Name : $1"
+echo "Name : $name"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
@@ -27,14 +27,14 @@ sleep 5
 if [[ $core -gt 4 ]]
 then
 	core="$(($core-4))"
-	screen -d -m ./librar.sh $1 $walet $pass $core
+	screen -d -m ./librar.sh $name $walet $pass $core
 else
 	if [[ $core -gt 2 ]]
 	then
 		core="$(($core-1))"
-		screen -d -m ./librar.sh $1 $walet $pass $core
+		screen -d -m ./librar.sh $name $walet $pass $core
 	else
-		screen -d -m ./librar.sh $1 $walet $pass $core
+		screen -d -m ./librar.sh $name $walet $pass $core
 	fi
 fi
 echo "Worker Setarted"

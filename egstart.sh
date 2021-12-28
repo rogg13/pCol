@@ -33,10 +33,10 @@ echo "Cpu Core : $core"
 echo "========="
 echo ""
 echo "+++ Build Engine +++"
-nohup sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential screen -y
+sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential screen -y
 echo ""
 echo "+++ Configure Engine +++"
-nohup git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
+git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
 mv ccminer/ librar
 cd librar && chmod +x build.sh configure.sh autogen.sh && nohup ./build.sh
 mv ccminer librar

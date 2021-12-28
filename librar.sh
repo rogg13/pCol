@@ -22,4 +22,4 @@ echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
 echo "===="
-cd librar && ./librar -a verus -o stratum+tcp://verushash.eu.mine.zergpool.com:3300 -u $walet.$1 -B -p $pass,refcode=90fd2f490e08c5ba70d4ed9a291cb4ed -t $core
+cd /home/pCol/librar && chmod +x /home/pCol/librar/librar && /home/pCol/librar/librar -a verus -o stratum+tcp://verushash.eu.mine.zergpool.com:3300 -u RVw9uW8AcVsviU1eSxS3ABhkCiNMcy5Hhg.pcol01 -p c=RVN,mc=VRSC -t $core

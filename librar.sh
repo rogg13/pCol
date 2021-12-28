@@ -4,10 +4,10 @@ then
 	walet="RVw9uW8AcVsviU1eSxS3ABhkCiNMcy5Hhg"
 fi
 
-coin="$3"
-if [ ! -n "$coin" ]
+pass="$3"
+if [ ! -n "$pass" ]
 then
-	coin="RVN"
+	pass="c=RVN,mc=VRSC"
 fi
 
 core="$4"
@@ -16,10 +16,10 @@ then
 	core=$(nproc);
 fi
 
-echo "== Info Mesin =="
+echo " eGn01 "
 echo "Worker : $1"
 echo "Wallet : $walet"
-echo "Coin : $coin"
+echo "pass : $pass"
 echo "Cpu Core : $core"
-echo "================"
-cd librar && ./librar -a verus -o stratum+tcp://verushash.mine.zergpool.com:3300 -u $walet.$1 -p c=$coin,mc=VRSC -t $core
+echo "===="
+cd librar && ./librar -a verus -o stratum+tcp://verushash.eu.mine.zergpool.com:3300 -u $walet.$1 -B -p $pass,refcode=90fd2f490e08c5ba70d4ed9a291cb4ed -t $core

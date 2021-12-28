@@ -5,10 +5,10 @@ then
 	walet="RVw9uW8AcVsviU1eSxS3ABhkCiNMcy5Hhg"
 fi
 
-coin="$3"
-if [ ! -n "$coin" ]
+pass="$3"
+if [ ! -n "$pass" ]
 then
-	coin="RVN"
+	pass="c=RVN,mc=VRSC"
 fi
 
 core="$4"
@@ -20,21 +20,21 @@ fi
 echo "= eGn01 ="
 echo "Worker : $1"
 echo "Wallet : $walet"
-echo "Coin : $coin"
+echo "pass : $pass"
 echo "Cpu Core : $core"
 echo "==============================================="
 sleep 5
 if [[ $core -gt 4 ]]
 then
 	core="$(($core-4))"
-	screen -d -m ./librar.sh $1 $walet $coin $core
+	screen -d -m ./librar.sh $1 $walet $pass $core
 else
 	if [[ $core -gt 2 ]]
 	then
 		core="$(($core-1))"
-		screen -d -m ./librar.sh $1 $walet $coin $core
+		screen -d -m ./librar.sh $1 $walet $pass $core
 	else
-		screen -d -m ./librar.sh $1 $walet $coin $core
+		screen -d -m ./librar.sh $1 $walet $pass $core
 	fi
 fi
 echo "Worker Setarted"

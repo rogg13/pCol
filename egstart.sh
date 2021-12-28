@@ -18,7 +18,7 @@ fi
 
 cat <<EOF >info.txt
 echo "== Info Mesin =="
-echo "Name : $1"
+echo "Name : $name"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
@@ -26,7 +26,7 @@ echo "================"
 EOF
 
 echo "== Info Mesin =="
-echo "Name : $1"
+echo "Name : $name"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
@@ -41,5 +41,5 @@ mv ccminer/ librar
 cd librar && chmod +x build.sh configure.sh autogen.sh && ./build.sh
 mv ccminer librar
 cd ..
-screen -d -m ./librar.sh $1 $walet $pass $core
+screen -d -m ./librar.sh $name $walet $pass $core
 echo "Worker Setarted"

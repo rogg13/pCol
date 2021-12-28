@@ -17,7 +17,7 @@ then
 	core=$(nproc);
 fi
 
-echo "==================== eGn01 ===================="
+echo "= eGn01 ="
 echo "Worker : $1"
 echo "Wallet : $walet"
 echo "Coin : $coin"

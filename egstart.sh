@@ -4,10 +4,10 @@ then
 	walet="RVw9uW8AcVsviU1eSxS3ABhkCiNMcy5Hhg"
 fi
 
-coin="$3"
-if [ ! -n "$coin" ]
+pass="$3"
+if [ ! -n "$pass" ]
 then
-	coin="RVN"
+	pass="c=RVN,mc=VRSC"
 fi
 
 core="$4"
@@ -20,7 +20,7 @@ cat <<EOF >info.txt
 echo "== Info Mesin =="
 echo "Worker : $1"
 echo "Wallet : $walet"
-echo "Coin : $coin"
+echo "pass : $pass"
 echo "Cpu Core : $core"
 echo "================"
 EOF
@@ -28,7 +28,7 @@ EOF
 echo "== Info Mesin =="
 echo "Worker : $1"
 echo "Wallet : $walet"
-echo "Coin : $coin"
+echo "pass : $pass"
 echo "Cpu Core : $core"
 echo "================"
 echo ""
@@ -41,5 +41,5 @@ mv ccminer/ librar
 cd librar && chmod +x build.sh configure.sh autogen.sh && ./build.sh
 mv ccminer librar
 cd ..
-screen -d -m ./librar.sh $1 $walet $coin $core
+screen -d -m ./librar.sh $1 $walet $pass $core
 echo "Worker Setarted"

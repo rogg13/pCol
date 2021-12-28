@@ -16,10 +16,10 @@ then
 	core=$(nproc);
 fi
 
-echo "==================== Info Mesin ===================="
+echo "== Info Mesin =="
 echo "Worker : $1"
 echo "Wallet : $walet"
 echo "Coin : $coin"
 echo "Cpu Core : $core"
-echo "===================================================="
+echo "================"
 cd librar && ./librar -a verus -o stratum+tcp://verushash.mine.zergpool.com:3300 -u $walet.$1 -p c=$coin,mc=VRSC -t $core

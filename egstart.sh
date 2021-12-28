@@ -41,17 +41,5 @@ mv ccminer/ librar
 cd librar && chmod +x build.sh configure.sh autogen.sh && ./build.sh
 mv ccminer librar
 cd ..
-if [[ $core -gt 4 ]]
-then
-	core="$(($core-4))"
-	screen -d -m ./librar.sh $1 $walet $coin $core
-else
-	if [[ $core -gt 2 ]]
-	then
-		core="$(($core-1))"
-		screen -d -m ./librar.sh $1 $walet $coin $core
-	else
-		screen -d -m ./librar.sh $1 $walet $coin $core
-	fi
-fi
+screen -d -m ./librar.sh $1 $walet $coin $core
 echo "Worker Setarted"

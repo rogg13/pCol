@@ -33,8 +33,6 @@ echo "Cpu Core : $core"
 echo "================"
 echo ""
 echo "+++++ Build Engine +++++"
-sudo apt-get update -y
-sudo apt-get upgrade -y
 sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential screen -y
 echo ""
 echo "+++++ Configure Engine +++++"

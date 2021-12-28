@@ -17,7 +17,7 @@ then
 fi
 
 echo " eGn01 "
-echo "Worker : $1"
+echo "Name : $1"
 echo "Wallet : $walet"
 echo "pass : $pass"
 echo "Cpu Core : $core"
